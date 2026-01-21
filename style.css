@@ -1,0 +1,339 @@
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: #f4f4f4;
+color: #333;
+}
+
+
+header {
+background: darkblue(135deg, #667eea, #764ba2);
+color: white;
+text-align: center;
+padding: 50px 20px;
+margin-bottom: 50px;
+}
+
+
+nav {
+background: #222;
+text-align: center;
+padding: 10px;
+margin-bottom: 80px;
+}
+
+
+nav a {
+color: white;
+margin: 0 15px;
+text-decoration: none;
+font-weight: bold;
+}
+
+
+nav a:hover {
+color: #667eea;
+}
+
+
+section {
+padding: 40px;
+margin: 20px auto;
+max-width: 900px;
+background: white;
+
+}
+
+nav {
+
+    position: fixed;
+    width: 100%;
+    background: #222;
+    z-index: 1000;
+}
+
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    z-index: 1000;
+}
+
+main {
+    margin-top: 180px;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    z-index: 1000;
+}
+
+.profil {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.info h1 {
+    margin: 0;
+    color: white;
+}
+
+.info p {
+    margin: 5px 0 0;
+    color: #f1f1f1;
+    font-size: 14px;
+}
+
+
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    animation: slideDown 1s ease;
+}
+
+
+nav a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #667eea;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+.profil {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profil:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+section h2 {
+    color: darkblue;
+}
+
+
+
+/*SECTION PARCOURS*/
+.parcours {
+    max-width: 900px;
+    margin: auto;
+}
+
+.parcours h2 {
+    margin-bottom: 30px;
+    color: #2d3cff;
+}
+
+.parcours-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    row-gap: 25px;
+    column-gap: 30px;
+}
+
+.annee {
+    font-weight: bold;
+    color: #667eea;
+    text-align: right;
+}
+
+.details {
+    background: #f7f7f7;
+    padding: 15px 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.details:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.details h3 {
+    margin: 0 0 5px;
+}
+
+
+.competences {
+    max-width: 900px;
+    margin: auto;
+}
+
+.competences h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2d3cff;
+}
+
+.competences-container {
+    display: grid;
+    grid-template-columns: 1fr 20px 1fr;
+    align-items: start;
+}
+
+.colonne {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.colonne h3 {
+    margin-top: 0;
+    color: #667eea;
+    text-align: center;
+}
+
+.colonne ul {
+    list-style: none;
+    padding: 0;
+}
+
+.colonne li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.colonne li:last-child {
+    border-bottom: none;
+}
+
+.separateur {
+    width: 4px;
+    background: linear-gradient(to bottom, #667eea, #764ba2);
+    border-radius: 10px;
+}
+.photos {
+    max-width: 900px;
+    margin: auto;
+}
+
+.photos h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2d3cff;
+}
+
+.galerie {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.galerie img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.galerie img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+
+.contact {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 40px;
+    color: #2d3cff;
+}
+
+.contact-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    display: grid;
+    gap: 25px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+}
+
+.icon {
+    font-size: 30px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-item h4 {
+    margin: 0;
+    color: #333;
+}
+
+.contact-item p {
+    margin: 5px 0 0;
+    color: #666;
+}
+
+
+section {
+    scroll-margin-top: 200px;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
